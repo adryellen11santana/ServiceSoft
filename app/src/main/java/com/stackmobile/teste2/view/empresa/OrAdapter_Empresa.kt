@@ -43,22 +43,24 @@ class OrAdapter_Empresa(private val ordemList: ArrayList<Ordem>, private val con
             btn_aceitar = itemView.findViewById(R.id.btn_aceitar)
             btn_aceitar.setOnClickListener {
                 //aceitar()
-                val statusRef = db.collection("Clientes").document("Status")
+                val statusRef = db.collection("Clientes").document(telefone.text.toString())
 
                 statusRef
                     .update("Status", "Em Andamento")
-                    .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!") }
+                    .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!")
+                        status.setText("Em Andamento")
+                    }
                     .addOnFailureListener { e -> Log.w(TAG, "ERRO ao atualizar", e) }
-
             }
             btn_recusar = itemView.findViewById(R.id.btn_recusar)
             btn_recusar.setOnClickListener {
                // recusar()
-                val statusRef = db.collection("Clientes").document("Status")
-
+                val statusRef = db.collection("Clientes").document(telefone.text.toString())
                 statusRef
                     .update("Status", "Recusado")
-                    .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!") }
+                    .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!")
+                        status.setText("Recusado")
+                    }
                     .addOnFailureListener { e -> Log.w(TAG, "ERRO ao atualizar", e) }
             }
             btn_avaliar = itemView.findViewById(R.id.btn_avaliar)
