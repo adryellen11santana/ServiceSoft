@@ -29,6 +29,8 @@ class OrAdapter_Cliente(private val ordemList: ArrayList<Ordem_Cliente>) : Recyc
             status = itemView.findViewById(R.id.status)
             btn_finalizar = itemView.findViewById(R.id.btn_finalizar)
             btn_finalizar.setOnClickListener {
+                //só vai atualizar, se o ID do document foi achado! verificar isso.
+                //no OrAdapter_Empresa, foi usado como ID o Telefone. Porém aqui, o telefone não foi criado.
                 val statusRef = db.collection("Clientes").document("Status")
 
                 statusRef

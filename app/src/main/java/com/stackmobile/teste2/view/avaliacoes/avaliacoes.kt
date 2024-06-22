@@ -19,12 +19,12 @@ import com.stackmobile.teste2.view.pesquisar.pesquisar
 class avaliacoes : AppCompatActivity() {
     private lateinit var binding: ActivityAvaliacoesBinding
     private val db = FirebaseFirestore.getInstance()
-
+    var id:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAvaliacoesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        receberId()
         binding.btnVoltar.setOnClickListener {
             val voltar = Intent(this, empresa_visualizar_servico::class.java)
             startActivity(voltar)
@@ -38,7 +38,7 @@ class avaliacoes : AppCompatActivity() {
         }
 
         binding.btnEnviar.setOnClickListener {
-            db.collection("Clientes").document()
+            db.collection("Clientes").document(id)
                 .update(
                     mapOf(
                         "Estrelas" to binding.avaliacao.rating,
@@ -53,5 +53,9 @@ class avaliacoes : AppCompatActivity() {
                 }
                 .addOnFailureListener { e -> Log.w(ContentValues.TAG, "ERRO", e) }
         }
+    }
+    private fun receberId(){
+        var telefone = intent.getStringExtra("telefone")
+        this.id = telefone.toString()
     }
 }
