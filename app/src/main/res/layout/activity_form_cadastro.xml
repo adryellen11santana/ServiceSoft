@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lightgreen"
+        tools:context=".view.formcadastro.Formcadastro">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/titulo.form.cadastro"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_telefone"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="text|phone"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_senha"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="numberPassword"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cadastrar"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:padding="15dp"
+            android:backgroundTint="@color/softgreen"
+            android:layout_margin="20dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_Tela_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tela_login"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle= "italic"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
