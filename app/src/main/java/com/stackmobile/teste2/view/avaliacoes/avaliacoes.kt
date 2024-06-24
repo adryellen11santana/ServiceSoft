@@ -18,6 +18,7 @@ class avaliacoes : AppCompatActivity() {
         binding = ActivityAvaliacoesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         receberId()
+
         binding.btnVoltar.setOnClickListener {
             val voltar = Intent(this, empresa_visualizar_servico::class.java)
             startActivity(voltar)

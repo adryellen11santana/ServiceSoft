@@ -4,4 +4,5 @@ data class Ordem_Cliente(
     val Servico:String?=null,
     val Status:String?=null,
     val Valor:String?=null,
+    val Telefone:String?=null
 )

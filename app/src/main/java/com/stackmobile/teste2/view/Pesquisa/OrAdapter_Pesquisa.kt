@@ -15,9 +15,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.stackmobile.teste2.R
 import com.stackmobile.teste2.view.avaliacoes.avaliacoes
 import com.stackmobile.teste2.view.cliente.Tela_cliente
-import com.stackmobile.teste2.view.home.Home
 
-class OrAdapter_Pesquisa(private val ordemList: ArrayList<Ordem_Pesquisa>, private val context:Context) : RecyclerView.Adapter<OrAdapter_Pesquisa.OrAdapter>() {
+class OrAdapter_Pesquisa(private val ordemList: ArrayList<Ordem_Pesquisa>) : RecyclerView.Adapter<OrAdapter_Pesquisa.OrAdapter>() {
 
     private val db = FirebaseFirestore.getInstance()
 

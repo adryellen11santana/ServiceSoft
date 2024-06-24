@@ -60,15 +60,15 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="23dp"
-                tools:layout_editor_absoluteY="8dp" />
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="4dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_cancelados"
                 android:layout_width="152dp"
                 android:layout_height="47dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="40dp"
                 android:background="@color/red"
                 android:text="Ordens Canceladas"
                 android:textAllCaps="false"
@@ -76,7 +76,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/btn_finalizados"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="8dp" />
+                tools:layout_editor_absoluteY="4dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView

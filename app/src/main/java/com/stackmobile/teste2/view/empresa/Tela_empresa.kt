@@ -7,6 +7,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.stackmobile.teste2.databinding.ActivityTelaEmpresaBinding
 import com.stackmobile.teste2.view.formlogin.form_login
 import com.stackmobile.teste2.view.Pesquisa.pesquisar
+import com.stackmobile.teste2.view.Relatorios.relatorios
 
 class Tela_empresa : AppCompatActivity() {
 
@@ -32,6 +33,12 @@ class Tela_empresa : AppCompatActivity() {
             binding.btnPesquisar.setOnClickListener {
                 val buscar = Intent(this, pesquisar::class.java)
                 startActivity(buscar)
+                finish()
+            }
+
+            binding.btnRelatorio.setOnClickListener {
+                val relato = Intent(this, relatorios::class.java)
+                startActivity(relato)
                 finish()
             }
         }

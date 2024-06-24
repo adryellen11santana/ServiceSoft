@@ -66,7 +66,7 @@ class relatorios : AppCompatActivity() {
             ordemList = arrayListOf()
 
             db.collection("Clientes")
-                .whereEqualTo("Status", "Cancelado")
+                .whereEqualTo("Status", "Recusado")
                 .get()
                 .addOnSuccessListener {
                     //verifica se achou algo no banco
