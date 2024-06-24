@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/lightgreen"
-        tools:context=".view.empresa.empresa_visualizar_servico">
+        tools:context=".view.cliente.cliente_visualizar_servico">
 
         <Button
             android:id="@+id/btn_voltar"

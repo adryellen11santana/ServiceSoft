@@ -2,18 +2,11 @@ package com.stackmobile.teste2.view.empresa
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
-import com.stackmobile.teste2.R
-import com.stackmobile.teste2.databinding.ActivityTelaClienteBinding
 import com.stackmobile.teste2.databinding.ActivityTelaEmpresaBinding
-import com.stackmobile.teste2.view.cliente.cadastro_servico
 import com.stackmobile.teste2.view.formlogin.form_login
-import com.stackmobile.teste2.view.home.Home
-import com.stackmobile.teste2.view.pesquisar.pesquisar
+import com.stackmobile.teste2.view.Pesquisa.pesquisar
 
 class Tela_empresa : AppCompatActivity() {
 
