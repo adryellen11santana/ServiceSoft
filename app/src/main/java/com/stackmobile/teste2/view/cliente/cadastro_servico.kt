@@ -31,8 +31,8 @@ class cadastro_servico : AppCompatActivity() {
                 "Servico" to binding.editServico.text.toString(),
                 "Status" to "Aberto",
                 "Valor" to binding.editValor.text.toString(),
-                "Estrelas" to "",
-                "Comentarios" to ""
+                //"Estrelas" to "",
+               // "Comentario" to ""
             )
 
 

@@ -35,7 +35,6 @@ class atualizar_cadastro : AppCompatActivity() {
             val telefone= binding.editTelefone.text.toString()
             val updatedData = mapOf(
                 "Nome" to binding.editNome.text.toString(),
-                "Telefone" to binding.editTelefone.text.toString(),
                 "Email" to binding.editEmail.text.toString(),
                 "Senha" to binding.editSenha.text.toString()
             )
@@ -50,7 +49,6 @@ class atualizar_cadastro : AppCompatActivity() {
                 // Sucesso ao atualizar
                 showToast("Atualização realizada com sucesso!")
                 binding.editNome.setText("")
-                binding.editTelefone.setText("")
                 binding.editEmail.setText("")
                 binding.editSenha.setText("")
             }

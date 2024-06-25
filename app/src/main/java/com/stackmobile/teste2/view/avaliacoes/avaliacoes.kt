@@ -49,7 +49,7 @@ class avaliacoes : AppCompatActivity() {
         }
     }
     private fun receberId(){
-        var telefone = intent.getStringExtra("Telefone")
+        var telefone = intent.getStringExtra("telefone")
         this.id = telefone.toString()
     }
 }
