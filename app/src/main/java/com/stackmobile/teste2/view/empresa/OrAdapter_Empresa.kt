@@ -15,7 +15,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.stackmobile.teste2.R
 import com.stackmobile.teste2.view.avaliacoes.avaliacoes
 import com.stackmobile.teste2.view.cliente.Tela_cliente
-import com.stackmobile.teste2.view.home.Home
 
 class OrAdapter_Empresa(private val ordemList: ArrayList<Ordem>, private val context:Context) : RecyclerView.Adapter<OrAdapter_Empresa.OrAdapter>() {
 

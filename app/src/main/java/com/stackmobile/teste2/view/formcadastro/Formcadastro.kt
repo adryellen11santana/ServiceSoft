@@ -17,7 +17,6 @@ import com.stackmobile.teste2.databinding.ActivityFormCadastroBinding
 import com.stackmobile.teste2.view.cliente.Tela_cliente
 import com.stackmobile.teste2.view.empresa.Tela_empresa
 import com.stackmobile.teste2.view.formlogin.form_login
-import com.stackmobile.teste2.view.home.Home
 
 class Formcadastro : AppCompatActivity() {
 
