@@ -45,7 +45,7 @@ class OrAdapter_Pesquisa(private val ordemList: ArrayList<Ordem_Pesquisa>) : Rec
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrAdapter {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_lista_pesquisa, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.activity_pesquisar, parent, false)
         return OrAdapter(itemView)
     }
 

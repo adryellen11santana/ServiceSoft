@@ -26,11 +26,9 @@ class pesquisar : AppCompatActivity() {
 
     private  lateinit var recyclerView: RecyclerView
     private lateinit var ordemList: ArrayList<Ordem_Pesquisa>
-    //private lateinit var procurar:EditText
-    //private lateinit var btn_procurar: Button
     lateinit var binding: ActivityPesquisarBinding
     private val db = FirebaseFirestore.getInstance()
-    //private val
+    private var mostrar:String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +43,7 @@ class pesquisar : AppCompatActivity() {
             finish()
         }
 
-        val itens = listOf("Em Andamento", "Recusado", "Aceito", "Aberto", "Péssimo", "Ruim", "Bom", "Muito Bom", "Excelente")
+        val itens = listOf("Cadastros", "Feedback", "Serviços")
 
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_complete)
 
@@ -58,8 +56,31 @@ class pesquisar : AppCompatActivity() {
 
         val itemSelected = adapterView.getItemAtPosition(i)
         Toast.makeText(this, "Item: $itemSelected", Toast.LENGTH_SHORT).show()
-
+            mostrar = itemSelected.toString()
+            ordemList.clear()
+            pesquisa()
         }
+    }
+    private fun pesquisa(){
+
+        db.collection("Clientes")
+            .get()
+            .addOnSuccessListener{
+                if (!it.isEmpty){
+                    for (data in it.documents){
+                        val ordem:Ordem_Pesquisa? = data.toObject(Ordem_Pesquisa::class.java)
+                        if (ordem != null && (ordem.Nome.toString() != null && ordem.Telefone.toString() != null && ordem.Email.toString() != null))
+                            if (mostrar != ""){
+                                ordemList.add(ordem)
+                            }
+                                //if (mostrar == ordem.Nome && ordem.Telefone && ordem.Email)
+                    }
+                    recyclerView.adapter = OrAdapter_Pesquisa(ordemList)
+                }
+            }
+            .addOnFailureListener{
+                Toast.makeText(this,it.toString(), Toast.LENGTH_SHORT).show()
+            }
     }
 
 }
