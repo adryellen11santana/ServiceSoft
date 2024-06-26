@@ -77,7 +77,7 @@
             android:layout_marginTop="35sp"
             android:backgroundTint="@color/softgreen"
             android:padding="15dp"
-            android:text="Atualizar Cadastro"
+            android:text="Atualizar Cadastro/Serviço"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp"
